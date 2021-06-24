@@ -1,0 +1,1020 @@
+/* #3E1C4F  , #9E3C7E */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background-color: #fff8ff;
+  /* border: 1px solid black; */
+  margin-top: 1rem;
+  /* margin-bottom: 2rem; */
+}
+
+input,select{
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 0.3px solid black;
+  text-align: center;
+  height: 24px;
+  width: 80%;
+}
+
+
+
+/* #9e3c7e, #3e1c4f */
+input:focus,select:focus{
+  outline:none;
+  box-shadow: 1px 0px 10px #9e3c7e
+}
+
+#spanDurationPerSession{
+  height: 40px;
+}
+
+.page-2 {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  background-color: #fff8ff;
+  width: 90%;
+  align-items: center;
+  margin-bottom: 2rem;
+  height: 100vh;
+}
+
+.page-3 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: #fff8ff;
+  width: 90%;
+  align-items: center;
+  margin-bottom: 2rem;
+  height: 100vh;
+}
+
+.inner-logo-last {
+  width: 20%;
+}
+
+.page-3 .heading div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-3 .navbar {
+  margin-bottom: 5rem;
+}
+
+.logo {
+  width: 2.5%;
+  margin-right: 0.5rem;
+}
+.top-inner-logo {
+  width: 6%;
+  margin: 0.2rem;
+}
+
+.personalLogo{
+  width: 5.5%;
+}
+.inner-logo {
+  width: 10%;
+  margin: 0.2rem;
+}
+.sessionsCompletedLogo{
+  width: 8%;
+}
+
+.dateOfReportLogo{
+  width: 12%;
+}
+.other-rating-logo {
+  width: 17%;
+}
+
+.rescheduled-session-logo {
+  width: 6%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  text-align: center;
+  min-width: 90%;
+  text-align: center;
+}
+
+.grid span {
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+span.heading {
+  align-items: center;
+}
+
+.navbar {
+  text-align: center;
+}
+.navbar img {
+  max-width: 20rem;
+  margin-top: 1rem;
+}
+
+.navbar h1 {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(#3e1c4f, #9e3c7e);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding-top: 1rem;
+  font-weight: 1500;
+}
+
+.general-information {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+}
+
+.assesment-review-1 {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.general-information-1 {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.student-report {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin-top: 0rem;
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+}
+
+.student-report-1 {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  font-size: 0.7rem;
+}
+
+.student-report-2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.79rem;
+}
+
+.student-report-3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.student-report-3-left {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin: 0.5rem;
+  font-size: 0.79rem;
+}
+
+.date-of-session {
+  width: 27.67%;
+}
+
+.attendence {
+  width: 26.67%;
+}
+
+.attendence-logo {
+  width: 12%;
+}
+#attendenceStatus1,
+#attendenceStatus2,
+#attendenceStatus3,
+#attendenceStatus4,
+#attendenceStatus5{
+  justify-content: center;
+}
+
+#dateOfSession1,
+#dateOfSession2,
+#dateOfSession3,
+#dateOfSession4,
+#dateOfSession5{
+  justify-content: center;
+}
+
+.student-report-3-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0.5rem;
+  font-size: 0.79rem;
+  justify-content: space-between;
+}
+.general-information-2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.personal-information {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  width: 40%;
+  font-size: 0.79rem;
+}
+
+.course-information {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  width: 40%;
+  font-size: 0.79rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to left, #9e3c7e, #3e1c4f);
+  color: white;
+  font-size: 0.79rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.child-inner-student-report {
+  width: 40%;
+  margin: 0.5rem;
+}
+
+.topics-covered  {
+  display: flex;
+  flex-direction: column;
+  width: 26.67%;
+}
+
+.inner-text{
+  margin-top: 0.005rem;
+  justify-content: center;
+}
+
+.learning-outcomes{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.learning-outcomes>.heading{
+  width: 24%;
+}
+
+.learning-outcomes>#learningOutcomes{
+  width: 56.55%;
+  justify-content: center;
+}
+
+.assesment-review {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 0;
+  padding: 1rem;
+}
+
+.assesment-review-1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  width: 90%;
+  font-size: 0.7rem;
+}
+
+.assesment-review-2 {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  justify-content: center;
+}
+
+.assesment-review-2-inner {
+  display: flex;
+  width: 81%;
+  margin: 0.5rem;
+  font-size: 0.79rem;
+}
+
+.assesment-review-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  margin: 0.1rem;
+  background-color: #e9dff3;
+  justify-content: space-between;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+span div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child-inner-student-report span div,
+.overall-performance-rating span div,
+.unsdgs-knowledge-rating span div {
+  justify-content: flex-start;
+}
+
+.assesment-review-logo img {
+  width: 20%;
+}
+
+.type,
+.submitted,
+.submission-date,
+.grade,
+.peers-avg-grade {
+  width: 98%;
+}
+
+.heading {
+  padding: 0.5rem;
+}
+
+.heading {
+  padding: 0.5rem;
+}
+
+.assesment-review-3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.overall-performance-rating,
+.unsdgs-knowledge-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 81%;
+  align-items: center;
+}
+
+.overall-performance-rating .heading,
+.unsdgs-knowledge-rating .heading {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.image {
+  width: 50%;
+  /* padding: 0.5rem; */
+  justify-content: space-around;
+}
+
+.image img {
+  width: 3%;
+}
+
+.assesment-review-2-inner
+  :is(.grade, .peers-avg-grade, .submission-date, .submitted, .type) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.ratings {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#submit{
+  padding: 0.5rem 1rem;
+  font-family:"Montserrat", sans-serif;
+  border-radius: 0.5rem;
+  background-color: #f4a2dc;
+}
+
+.ratings-1 {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.other-ratings {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-bottom: 1rem;
+}
+
+.other-rating-2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.79rem;
+}
+
+.other-rating-2 div span div {
+  justify-content: flex-start;
+}
+
+.radical-thinker span div img {
+  width: 16%;
+}
+
+.innovative-thinker span div img {
+  width: 12%;
+}
+
+.quality-obsession span div img {
+  width: 12%;
+}
+
+.hands-on-skill span div img,
+.big-dreamer span div img {
+  width: 15%;
+}
+
+.marks img {
+  width: 7%;
+}
+
+.marks {
+  display: flex;
+  justify-content: space-around;
+}
+.other-rating-2 .radical-thinker,
+.other-rating-2 .innovative-thinker,
+.other-rating-2 .quality-obsession,
+.other-rating-2 .hands-on-skill,
+.other-rating-2 .big-dreamer,
+.other-rating-2 .impactful-approach {
+  display: flex;
+  flex-direction: row;
+}
+
+.radical-thinker span,
+.innovative-thinker span,
+.quality-obsession span,
+.hands-on-skill span,
+.big-dreamer span,
+.impactful-approach span {
+  width: 50%;
+}
+.overall-ratings {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.overall-ratings-2 {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.79rem;
+  height: 83%;
+}
+
+.overall-ratings-2-left {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.strong-points-heading {
+  height: 33%;
+}
+
+.strong-points-heading div img {
+  width: 18%;
+}
+
+.overall-ratings-2-right {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+}
+
+.overall-ratings-2-right span {
+  height: 33%;
+}
+
+.page-2 span {
+  height: 5vh;
+  align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  span {
+    font-size: 0.5rem;
+  }
+
+  .heading {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .overall-ratings-2-left .strong-points-heading {
+    height: 33%;
+  }
+
+  .general-information {
+    width: 100%;
+  }
+
+  span {
+    font-size: 0.55rem;
+    padding: 0.3rem;
+  }
+
+  .navbar img {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .heading {
+    font-size: 0.5rem;
+    padding: 0.3rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+
+  .strong-points-heading,
+  .overall-ratings-2-right span {
+    height: 33%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.5rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 110%;
+  }
+
+  .navbar img {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.45rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 120%;
+  }
+
+  .navbar img {
+    width: 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.41rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 120%;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .navbar img {
+    width: 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.41rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 110%;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 0.5rem;
+  }
+
+  .navbar img {
+    width: 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.25rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 110%;
+  }
+
+  h1 {
+    font-size: 0.6rem;
+  }
+
+  span {
+    font-size: 0.25rem;
+  }
+
+  .navbar img {
+    width: 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.22rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 140%;
+  }
+
+  h1 {
+    font-size: 0.5rem;
+  }
+
+  span {
+    font-size: 0.2rem;
+  }
+
+  .navbar img {
+    width: 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .heading {
+    padding: 0.2rem;
+    font-size: 0.2rem;
+  }
+
+  .general-information,
+  .student-report,
+  .assesment-review,
+  .ratings {
+    width: 120%;
+  }
+
+  h1 {
+    font-size: 0.5rem;
+  }
+
+  .page-2 span {
+    height: 3vh;
+  }
+
+  span {
+    font-size: 0.2rem;
+  }
+
+  .navbar img {
+    width: 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    text-align: center;
+    min-width: 90%;
+    text-align: center;
+  }
+
+  .strong-points-heading,
+  .overall-ratings-2-right span {
+    height: 26.5%;
+  }
+}
+
+
+ /* loader */
+
+  .letter{
+    background-color: transparent;
+  }
+
+ #loader{
+  display: none;
+}
+
+#loader{
+z-index: 2;
+background: grey;
+height :240vh;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgb(0,0,0,0.75);
+}
+
+#cupcake{
+flex-direction:row;
+-webkit-flex-direction:row;
+-ms-flex-direction:row;
+-mos-flex-direction:row;
+-o-flex-direction:row;
+justify-content:center;
+-webkit-justify-content:center;
+-ms-justify-content:center;
+position: fixed;
+bottom: 50%;
+top: 50%;
+width:100%;
+background-color:transparent;
+
+}
+
+.letter{
+    font-size:70px;
+    color:rgb(196, 191, 191);
+    font-family:sans-serif;
+}
+
+.box{
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.cupcakeCircle, .cupcakeInner, .cupcakeCore{
+     border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+}
+
+.cupcake, .letter, .cupcakeCircle, .cupcakeInner, .cupcakeCore{
+    flex:none;
+    -webkit-flex:none;
+    -moz-flex:none;
+    -ms-flex:none;
+    -o-flex:none;
+}
+
+.letter, .cupcakeCircle{
+    align-self:center;
+    -webkit-align-self:center;
+    -moz-align-self:center;
+    -o-align-self:center;
+    -ms-align-self:center;
+}
+.cupcakeCircle{
+    align-items:center;
+    -ms-align-items:center;
+    justify-content:center;
+    -ms-justify-content:center;
+    height:100px;
+    width:100px;
+    background-color:#222;
+}
+
+.cupcakeInner{
+    align-self:center;
+    -ms-align-self:center;
+    justify-content:center;
+    -ms-justify-content:center;
+    height:25%;
+    width:25%;
+    background-color:#9221fc;
+    -webkit-animation-name:cupcakeAnimate;
+    animation-name: cupcakeAnimate;
+    -webkit-animation-duration:500ms;
+    animation-duration: 500ms;
+    -webkit-animation-direction:alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
+}
+.cupcakeCore{
+    align-self:center;
+    -ms-align-self:center;
+    height:25%;
+    width:25%;
+    background-color:#222;
+    -webkit-animation-name:coreAnimate;
+    animation-name:coreAnimate ;
+    -webkit-animation-duration:1s;
+    animation-duration: 1s;
+    -webkit-animation-direction:alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes cupcakeAnimate{
+        to{ height:90%; width:90%; }
+}
+@keyframes cupcakeAnimate{
+    to{ height:90%; width:90%; }
+}
+
+@-webkit-keyframes coreAnimate{
+    to{ height:90%; width:90%; }
+}
+@keyframes coreAnimate{
+    to{ height:90%; width:90%; }
+}

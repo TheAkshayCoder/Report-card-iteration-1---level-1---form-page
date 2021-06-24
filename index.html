@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Evaluation Form</title>
+    
+</head>
+<link rel="stylesheet" href="style.css">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<script src="script.js"></script>
+<body>
+    <div class="loader" id="loader">
+        <div id="cupcake" class="box">
+            <span class="letter">L</span>
+
+            <div class="cupcakeCircle box">
+                <div class="cupcakeInner box">
+                    <div class="cupcakeCore box"></div>
+
+                </div>
+            </div>
+
+            <span class="letter box">A</span>
+            <span class="letter box">D</span>
+            <span class="letter box">I</span>
+            <span class="letter box">N</span>
+            <span class="letter box">G</span>
+        </div>
+    </div>
+    <div class="page-1">
+        <div class="navbar">
+            <img src="./Images/BeSingular Colour Logo.png" alt="logo" srcset="">
+            <h1>STUDENT EVALUATION REPORT</h1>
+        </div>
+        <div class="general-information">
+            <div class="general-information-1">
+                <img src="images/GENERAL INFORMATION.png" class="logo" alt="" srcset="">
+                <h1>GENERAL INFORMATION</h1>
+            </div>
+            <div class="general-information-2">
+                <div class="personal-information">
+                    <span class="heading">
+                        <img src="images/PERSONAL INFORMATION.png" class="top-inner-logo personalLogo" alt="" srcset="">
+                        PERSONAL INFORMATION
+                    </span>
+                    <span>NAME: <div class="name" id="fullName">Raj Aryan</div>
+                    </span>
+                    <span>
+                        EMAIL-ID: <div class="refigtered-email-id" id="emailId">lorem@gmail.com</div>
+                    </span>
+                    <span>
+                        GENDER: <div class="Gender" id="gender">Male</div>
+                    </span>
+                    <span>
+                        AGE: <div class="Age" id="age">13</div>
+                    </span>
+                    <span>
+                        COUNTRY: <div class="Country" id="country"><input type="text" name="country" value="country" id="inputCountry"></div>
+                    </span>
+                    <span>
+                        TIMEZONE: <div class="Timezone" id="timezone"><input type="text" name="timeZone" value="timeZone" id="inputTimezone"></div>
+                    </span>
+
+                </div>
+                <div class="course-information">
+                    <span class="heading">
+                        <img src="images/COURSE INFORMATION.png" class="top-inner-logo courseInformationLogo" alt="" srcset="">
+                        COURSE INFORMATION</span>
+                    <span>
+                        COURSE NAME: <div class="course-name" id="courseName">Future Tech Junior</div>
+                    </span>
+                    <span>
+                        COURSE INFORMATION: <div class="course-information-inside" id="courseInformation">Links</div>
+                    </span>
+                    <span>
+                        AGE GRADE OF COURSE: <div class="age-grade-of-course" id="ageGrade">11-14</div>
+                    </span>
+                    <span>
+                        NUMBER OF SESSIONS: <div class="number-of-sessions" id="numberOfSessions">13</div>
+                    </span>
+                    <span id="spanDurationPerSession">
+                        DURATION PER SESSION: <div class="duration-per-session" id="durationOfSession">
+                            60 minutes
+                        </div>
+                    </span>
+                    <span>
+                        HOURS PER WEEK: <div class="session-frequency" id="sessionFrequency">
+                            <input type="text" name="" id="hoursPerWeekInput">
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="student-report">
+            <div class="student-report-1">
+                <img src="images/STUDENT REPORT.png" class="logo" alt="" srcset="">
+                <h1>STUDENT REPORT</h1>
+            </div>
+            <div class="student-report-2">
+                <div class="child-inner-student-report">
+                    <span>
+                        <div>
+                            <img src="images/Date Of Report.png" class="inner-logo dateOfReportLogo"
+                                alt="" srcset="">
+                            DATE OF REPORT
+                        </div>
+                        <div class="date-of-report" id="dor">--/--/--</div>
+                    </span>
+                    <span>
+                        <div>
+                            <img src="images/NO. Of Sessions Completed.png" class="inner-logo sessionsCompletedLogo" alt="" srcset="">
+                            NO. OF SESSIONS COMPLETED
+                        </div>
+                        <div class="sessions-completed" id="sessionsCompleted"><input type="number" id="sessionsCompletedInput" value="2"></div>
+                    </span>
+                </div>
+                <div class="child-inner-student-report">
+                    <span>
+                        <div>
+                            <img src="images/NO. of MISSED Sessions.png" class="inner-logo" alt="" srcset="">
+                            NO. OF SESSIONS MISSED
+                        </div>
+                        <div class="missed-sessions" id="missedSessions"><input type="number" id="missedSessionsInput" value="2"></div>
+                    </span>
+                    <span>
+                        <div>
+                            <img src="images/NO. Of Sessions RESCHEDULED.png"
+                                class="inner-logo rescheduled-session-logo" alt="" srcset="">
+                            NO. OF SESSIONS RESHEDULED
+                        </div>
+                        <div class="sessions-resheduled" id="sessionsResheduled"><input type="number" id="sessionsResheduledInput" value="2"></div>
+                    </span>
+                </div>
+            </div>
+            <div class="student-report-3">
+                    <div class="date-of-session" id="dateOfSessionDiv">
+                        <span class="heading" >
+                            <div>
+                                <img src="images/Date Of Session.png" class="inner-logo" alt="" srcset="">
+                                DATE OF SESSION
+                            </div>
+                        </span>
+                    </div>
+                    <div class="attendence" id="attendenceDiv">
+                        <span class="heading">
+                            <div>
+                                <img src="images/Attendance.png" class="inner-logo attendence-logo" alt="" srcset="">
+                                ATTENDENCE
+                            </div>
+                        </span>
+                        
+                    </div>
+                    <div class="topics-covered" id="topicsCoveredDiv">
+                        <span class="heading">
+                            <div>
+                                <img src="images/Topics Covered.png" class="inner-logo" alt="" srcset="">
+                                TOPICS COVERED
+                            </div>
+                        </span>
+                    </div>
+            </div>
+            <div class="learning-outcomes">
+                <span class="heading">
+                    <div>
+                        <img src="images/Learning Outcomes.png" class="inner-logo" alt="" srcset="">
+                        LEARNING OUTCOMES
+                    </div>
+                </span>
+                <span id="learningOutcomes"><input type="text" id="learningOutcomeValue" value="dummy text"></span>
+            </div>
+        </div>
+        <!-- <div class="assesment-review">
+            <div class="assesment-review-1">
+                <img src="images/ASSESMENT REVIEW.png" class="logo" alt="" srcset="">
+                <h1>ASSESMENT REVIEW</h1>
+            </div>
+            <div class="assesment-review-2">
+                <div class="assesment-review-2-inner">
+                    <div class="type">
+                        <span class="heading">TYPE</span>
+                        <span class="type" id="type1">REVISION 1</span>
+                        <span class="type" id="type2">REVISION 2</span>
+                        <span class="type" id="type3">ASSIGNMENT 1</span>
+                        <span class="type" id="type4">ASSIGNMENT 1</span>
+                    </div>
+                    <div class="submitted">
+                        <span class="heading">SUBMITTED</span>
+                        <span class="submitted" id="submitted1">99%</span>
+                        <span class="submitted" id="submitted2">55%</span>
+                        <span class="submitted" id="submitted3">A</span>
+                        <span class="submitted" id="submitted4">A</span>
+                    </div>
+                    <div class="submission-date">
+                        <span class="heading">SUBMISSION DATE</span>
+                        <span class="submission-date" id="submissionDate1">--/--/--</span>
+                        <span class="submission-date" id="submissionDate2">--/--/--</span>
+                        <span class="submission-date" id="submissionDate3">--/--/--</span>
+                        <span class="submission-date" id="submissionDate4">--/--/--</span>
+                    </div>
+                    <div class="grade">
+                        <span class="heading">GRADE</span>
+                        <span class="grade" id="grade1">A</span>
+                        <span class="grade" id="grade1">A</span>
+                        <span class="grade" id="grade1">A</span>
+                        <span class="grade" id="grade1">A</span>
+                    </div>
+                    <div class="peers-avg-grade">
+                        <span class="heading">PEERS AVG. GRADE</span>
+                        <span class="peers-avg-grade" id="peersAvgGrade">99%</span>
+                        <span class="peers-avg-grade" id="peersAvgGrade">99%</span>
+                        <span class="peers-avg-grade" id="peersAvgGrade">99%</span>
+                        <span class="peers-avg-grade" id="peersAvgGrade">99%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="assesment-review-3">
+                <div class="overall-performance-rating">
+                    <span class="heading">
+                        <div>
+                            <img src="images/overall performance rating.png"
+                                class="inner-logo overall-performance-rating-logo" alt="" srcset="">
+                            OVERALL PERFORMANCE RATING
+                        </div>
+                    </span>
+                    <span class="image" id="overallPerformaceRating">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                    </span>
+                </div>
+                <div class="unsdgs-knowledge-rating">
+                    <span class="heading">
+                        <div>
+                            <img src="images/unsdgs KNOWLEDGE RATING.png" class="inner-logo" alt="" srcset="">
+                            UNSDGs KNOWLEDGE RATING
+                        </div>
+                    </span>
+                    <span class="image">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                        <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                    </span>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="ratings">
+            <div class="ratings-1">
+                <img src="images/RATINGS.png" class="logo" alt="" srcset="">
+                <h1>RATINGS</h1>
+            </div>
+            <div class="rating-2">
+                <div class="other-ratings">
+                    <div class="other-ratings-1">
+                        <span class="heading">
+                            <div>
+                                <img src="images/OTHER RATINGS.png" class="inner-logo other-rating-logo" alt=""
+                                    srcset="">
+                                OTHER RATING
+                            </div>
+                        </span>
+                    </div>
+                    <div class="other-rating-2">
+                        <div class="radical-thinker">
+                            <span>
+                                <div>
+                                    <img src="images/RADICAL THINKER.png" class="inner-logo radical-thinker-icon" alt=""
+                                        srcset="">
+                                    RADICAL THINKER
+                                </div>
+                            </span>
+                            <span class="marks">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                            </span>
+                        </div>
+                        <div class="innovative-thinker">
+                            <span>
+                                <div>
+                                    <img src="images/INNOVATIVE THINKER.png" class="inner-logo" alt="" srcset="">
+                                    INNOVATIVE THINKER
+                                </div>
+                            </span>
+                            <span class="marks">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                            </span>
+                        </div>
+                        <div class="quality-obsession">
+                            <span>
+                                <div>
+                                    <img src="images/QUALITY OBSESSION.png" class="inner-logo" alt="" sizes=""
+                                        srcset="">
+                                    QUALITY OBSESSION
+                                </div>
+                            </span>
+                            <span class="marks">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                            </span>
+                        </div>
+                        <div class="hands-on-skill">
+                            <span>
+                                <div>
+                                    <img src="images/HANDS ON SKILL.png" class="inner-logo" alt="" srcset="">
+                                    HANDS ON SKILL
+                                </div>
+                            </span>
+                            <span class="marks">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                            </span>
+                        </div>
+                        <div class="big-dreamer">
+                            <span>
+                                <div>
+                                    <img src="images/BIG DREAMER.png" class="inner-logo" alt="">
+                                    BIG DREAMER
+                                </div>
+                            </span>
+                            <span class="marks">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                            </span>
+                        </div>
+                        <div class="impactful-approach">
+                            <span>
+                                <div>
+                                    <img src="images/IMPACTFUL APPROACH.png" class="inner-logo" alt="" srcset="">
+                                    IMPACTFUL APPROACH
+                                </div>
+                            </span>
+                            <span class="marks">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                                <img src="Images/Layer 7 copy.png" alt="logo" srcset="">
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="overall-ratings">
+                    <div class="overall-ratings-1">
+                        <span class="heading">
+                            <div>
+                                <img src="Images/overall ratings.png" class="inner-logo" alt="" srcset="">
+                                OVERALL RATINGS
+                            </div>
+                        </span>
+                    </div>
+                    <div class="overall-ratings-2">
+                        <div class="overall-ratings-2-left">
+                            <span class="strong-points-heading">
+                                <div>
+                                    <img src="Images/strong.png" class="inner-logo" alt="" srcset="">
+                                    STRONG POINTS
+                                </div>
+                            </span>
+                            <span class="strong-points-heading">
+                                <div>
+                                    <img src="Images/weak.png" class="inner-logo" alt="" srcset="">
+                                    WEAK POINTS
+                                </div>
+                            </span>
+                            <span class="strong-points-heading">
+                                <div>
+                                    <img src="Images/other suggestion.png" class="inner-logo" alt="" srcset="">
+                                    OTHER SUGGESTIONS
+                                </div>
+                            </span>
+                        </div>
+                        <div class="overall-ratings-2-right">
+                            <span class="strong-points" id="strongPoints"></span>
+                            <span class="weak-points" id="weakPoints"></span>
+                            <span class="other-suggestions" id="otherSuggestions"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    </div>
+    </div>
+    <div class="page-2">
+                <!-- <div class="navbar">
+                    <img src="./Images/BeSingular Colour Logo.png" alt="logo" srcset="">
+                    <h1>STUDENT EVALUATION REPORT</h1>
+                </div> -->
+                <div class="assesment-review">
+                    <div class="assesment-review-1">
+                        <img src="images/ASSESMENT REVIEW 2.png" class="logo" alt="" srcset="">
+                        <h1>ASSESMENT REVIEW</h1>
+                    </div>
+            <div class="assesment-review-2">
+                <div class="assesment-review-2-inner">
+                    <div class="type" id="typeDiv">
+                        <div class="assesment-review-logo">
+                            <img src="images/TYPE.png" alt="" srcset="">
+                        </div>
+                        <span class="heading">TYPE</span>
+                        
+                        
+                    </div>
+                    <div class="submitted" id="submittedDiv">
+                        <div class="assesment-review-logo">
+                            <img src="images/submitted.png" alt="" srcset="">
+                        </div>
+                        <span class="heading">SUBMITTED</span>
+                        
+                    </div>
+                    <div class="submission-date" id="submissionDateDiv">
+                        <div class="assesment-review-logo">
+                            <img src="images/submission date.png" alt="" srcset="">
+                        </div>
+                        <span class="heading">SUBMISSION DATE</span>
+                        
+                        
+                    </div>
+                    <div class="grade" id="gradeDiv">
+                        <div class="assesment-review-logo">
+                            <img src="images/grade edited.png" class="grade-img-logo" alt="" srcset="">
+                        </div>
+                        <span class="heading">GRADE</span>
+                    </div>
+                    <!-- <div class="peers-avg-grade">
+                        <div class="assesment-review-logo">
+                            <img src="images/peers AVg. grade.png" alt="" srcset="">
+                        </div>
+                        <span class="heading">PEERS AVG. GRADE</span>
+                        <span class="peers-avg-grade">99%</span>
+                        <span class="peers-avg-grade">55%</span>
+                        <span class="peers-avg-grade">A</span>
+                        <span class="peers-avg-grade">A</span>
+                        <span class="peers-avg-grade"></span>
+                        <span class="peers-avg-grade"></span>
+                        <span class="peers-avg-grade"></span>
+                        <span class="peers-avg-grade"></span>
+                        <span class="peers-avg-grade"></span>
+                        <span class="peers-avg-grade"></span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <button id="submit" onclick="submit()">Submit</button>
+    </div>
+    <!-- <div class="page-3">
+        <div class="navbar">
+            <img src="./Images/BeSingular Colour Logo.png" alt="logo" srcset="">
+            <h1>STUDENT EVALUATION REPORT</h1>
+        </div>
+        <div class="grid">
+            <span class="heading">
+                <div>
+                    <img src="Images/RADICAL THINKER(1).png" class="inner-logo-last" alt="">
+                    RADICAL THINKER
+                </div>
+            </span>
+            <span class="seventy">ABILITY TO FIND BASIC SOLUTION TO COMPLEX PROBLEMS</span>
+            <span class="heading">
+                <div>
+                    <img src="images/INNOVATIVE THINKER(1).png" class="inner-logo-last" alt="" srcset="">
+                    INNOVATIVE THINKER
+                </div>
+            </span>
+            <span class="seventy">INNOVATIVE APPROACH TOWARDS PROJECTS AND ASSIGNMENTS</span>
+            <span class="heading">
+                <div>
+                    <img src="images/QUALITY OBSESSION(1).png" class="inner-logo-last" alt="" srcset="">
+                    QUALITY OBSESSION
+                </div>
+            </span>
+            <span class="seventy">FOCUSSING ON MINOR DETAILS OF ASSIGNMENTS AND PROJECT</span>
+            <span class="heading">
+                <div>
+                    <img src="images/EMPATHY(1).png" class="inner-logo-last" alt="" srcset="">
+                    EMPATHY LEVEL
+                </div>
+            </span>
+            <span class="seventy">EMPATHETIC TOWARDS TRAINER AND PEER STUDENTS</span>
+            <span class="heading">
+                <div>
+                    <img src="images/HANDS ON SKILL(1).png" class="inner-logo-last" alt="" srcset="">
+                    HANDS ON SKILL
+                </div>
+            </span>
+            <span class="seventy">ABILITY TO DEVELOP PRACTICAL PROJECTS</span>
+            <span class="heading">
+                <div>
+                    <img src="images/BIG DREAMER(1).png" class="inner-logo-last" alt="" srcset="">
+                    BIG DREAMER
+                </div>
+            </span>
+            <span class="seventy">ABILITY TO THINK AND PROVIDE SOLUTIONS TO UNSDG BASED PROBLEM</span>
+            <span class="heading">
+                <img src="images/IMPACTFUL APPROACH(1).png" class="inner-logo-last" alt="" srcset="">
+                IMPACTFUL APPROACH
+            </span>
+            <span class="seventy">OUT OF THE BOX THINKING THAT IMPACTS</span>
+        </div>
+
+    </div> -->
+    
+</body>
+<!-- <script src="script.js"></script> -->
+
+</html>
