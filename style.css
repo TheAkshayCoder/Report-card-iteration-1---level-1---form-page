@@ -884,9 +884,7 @@ span div {
 
  /* loader */
 
-  .letter{
-    background-color: transparent;
-  }
+  
 
  #loader{
   display: none;
@@ -925,6 +923,7 @@ background-color:transparent;
     font-size:70px;
     color:rgb(196, 191, 191);
     font-family:sans-serif;
+    background: transparent;
 }
 
 .box{
