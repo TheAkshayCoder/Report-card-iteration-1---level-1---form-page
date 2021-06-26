@@ -1,6 +1,6 @@
 var formDataGlobal = {};
+var topics=0
 
-console.log('hello')
 const arr = [
     {id: 1, date: "09-06-2021", status: "Present", topicsCovered: "conditions"},
     {id: 2, date: "10-06-2021", status: "Present", topicsCovered: "AR"},
@@ -8,17 +8,17 @@ const arr = [
     {id: 4, date: "15-06-2021", status: "Present", topicsCovered: "arrays"}
 ]
 
-const assesmentArr = [
-    {type:"Assignment-1", submitted:"No", submissionDate:"22-06-2021", grade:"--NA--"},
-    {type:"Assignment-2", submitted:"No", submissionDate:"20-06-2021", grade:"--NA--"},
-    {type:"Assignment-3", submitted:"Yes", submissionDate:"18-06-2021", grade:95},
-    {type:"Assignment-4", submitted:"Yes", submissionDate:"12-06-2021", grade:95},
-    {type:"Assignment-5", submitted:"Yes", submissionDate:"01-06-2021", grade:95}
+const assessment_info = [
+    {id:4884,type:"Assignment-1", submitted:"No", submissionDate:"22-06-2021", grade:"--NA--"},
+    {id:4884,type:"Assignment-2", submitted:"No", submissionDate:"20-06-2021", grade:"--NA--"},
+    {id:4884,type:"Assignment-3", submitted:"Yes", submissionDate:"18-06-2021", grade:95},
+    {id:4884,type:"Assignment-4", submitted:"Yes", submissionDate:"12-06-2021", grade:95},
+    {id:4884,type:"Assignment-5", submitted:"Yes", submissionDate:"01-06-2021", grade:95}
 ]
 
 const personalInfo = {
     id:'28',
-    fullName:'Tiago',
+    first_name:'Tiago',
     emailId:'tiago147@gmail.com',
     gender:'Male',
     age:'10 Years',
@@ -31,17 +31,17 @@ const personalInfo = {
     durationOfSession:'60 Minutes',
     hoursPerWeek:'3 hours',
     dor:'24-06-2021',
-    sessionsCompleted:'4',
+    sessionsCompleted:'13',
     missedSessions:'0',
     sessionsResheduled:'0'
 }
 
-for (i=0;i<assesmentArr.length;i++){
+for (i=0;i<assessment_info.length;i++){
     
-        let date = assesmentArr[i].submissionDate.slice(0,2)
-        let month = assesmentArr[i].submissionDate.slice(3,5)
-        let year = assesmentArr[i].submissionDate.slice(6,10)
-        assesmentArr[i].submissionDate=`${year}-${month}-${date}`
+        let date = assessment_info[i].submissionDate.slice(0,2)
+        let month = assessment_info[i].submissionDate.slice(3,5)
+        let year = assessment_info[i].submissionDate.slice(6,10)
+        assessment_info[i].submissionDate=`${year}-${month}-${date}`
     
     
 }
@@ -59,45 +59,49 @@ window.onload = function(){
     const gradeDiv = document.getElementById('gradeDiv')
 
     // personal information
-    const fullName=document.getElementById('fullName')
-    const emailId=document.getElementById('emailId')
-    const gender=document.getElementById('gender')
-    const age=document.getElementById('age')
+    const fullName=document.getElementById('inputName')
+    const emailId=document.getElementById('inputEmail')
+    const gender=document.getElementById('inputGender')
+    const age=document.getElementById('inputAge')
     const inputCountry=document.getElementById('inputCountry')
     const inputTimezone=document.getElementById('inputTimezone')
 
     // course information
-    const courseName=document.getElementById('courseName')
+    const courseName=document.getElementById('inputCourseName')
     const courseInformation=document.getElementById('courseInformation')
-    const ageGrade=document.getElementById('ageGrade')
-    const numberOfSessions=document.getElementById('numberOfSessions')
-    const durationOfSession=document.getElementById('durationOfSession')
+    const ageGrade=document.getElementById('inputAgeGrade')
+    const numberOfSessions=document.getElementById('inputNumberOfSessions')
+    const durationOfSession=document.getElementById('inputDurationPerSession')
     const hoursPerWeekInput=document.getElementById('hoursPerWeekInput')
-    const dor=document.getElementById('dor')
+    const dor=document.getElementById('inputDateOfReport')
     const sessionsCompletedInput=document.getElementById('sessionsCompletedInput')
     const missedSessionsInput= document.getElementById('missedSessionsInput')
     const sessionsResheduledInput=document.getElementById('sessionsResheduledInput')
-    
-    fullName.innerHTML=personalInfo.fullName
-    emailId.innerHTML=personalInfo.emailId
-    gender.innerHTML=personalInfo.gender
-    age.innerHTML=personalInfo.age
+     let date = personalInfo.dor.slice(0,2)
+    let month = personalInfo.dor.slice(3,5)
+    let year = personalInfo.dor.slice(6,10)
+    let dateOfReport =`${year}-${month}-${date}`
+    fullName.setAttribute('value',personalInfo.first_name)
+    emailId.setAttribute('value',personalInfo.emailId)
+    gender.setAttribute('value',personalInfo.gender)
+    age.setAttribute('value',personalInfo.age)
     inputCountry.setAttribute('value',personalInfo.Country)
     inputTimezone.setAttribute('value',personalInfo.timeZone)
-    courseName.innerHTML=personalInfo.courseName
-    courseInformation.innerHTML=personalInfo.courseInfo
-    ageGrade.innerHTML=personalInfo.ageGrade
-    numberOfSessions.innerHTML=personalInfo.numberOfSessions
-    durationOfSession.innerHTML=personalInfo.durationOfSession
+    courseName.setAttribute('value',personalInfo.courseName)
+    courseInformation.setAttribute('value',personalInfo.courseInfo)
+    ageGrade.setAttribute('value',personalInfo.ageGrade)
+    numberOfSessions.setAttribute('value',personalInfo.numberOfSessions)
+    durationOfSession.setAttribute('value',personalInfo.durationOfSession)
     hoursPerWeekInput.setAttribute('value',personalInfo.hoursPerWeek)
-    dor.innerHTML=personalInfo.dor
+    dor.setAttribute('value',dateOfReport)
     sessionsCompletedInput.setAttribute('value',personalInfo.sessionsCompleted)
     missedSessionsInput.setAttribute('value',personalInfo.missedSessions)
     sessionsResheduledInput.setAttribute('value',personalInfo.sessionsResheduled)
 
-
+    
+  
     for (i=0; i<arr.length; i++){
-
+        topics++
         // dynamic addition attendence fields
         let span = document.createElement('span')
         span.setAttribute('id',`attendenceStatus${i+1}`)
@@ -124,28 +128,29 @@ window.onload = function(){
         // dynamic addition of topics coverd section
         span = document.createElement('span')
         span.classList.add('inner-text')
-        span.innerHTML=`<input type="text" name="topicCovered${i+1}" id="topicCovered${i+1}" value="${arr[i].topicsCovered}" style="height: 24px;">`
+        span.innerHTML=`<input type="text" name="topicCovered${i+1}" id="topicCovered${i+1}" value="${arr[i].topicsCovered}" style="height: 24px;">
+        <div class="error" id="topicsCoveredError${i+1}"><div>`
         topicsCoveredDiv.appendChild(span)
     }
 
 
-    for (i=0;i<assesmentArr.length;i++){
+    for (i=0;i<assessment_info.length;i++){
         // dynamic addition of type field
         let span = document.createElement('span')
         span.classList.add('type')
-        span.innerHTML=`<input type="text" value="${assesmentArr[i].type}" id="type${i+1}">`
+        span.innerHTML=`<input type="text" value="${assessment_info[i].type}" id="type${i+1}">`
         typeDiv.appendChild(span)
 
         // dynamic additon of submitted field
         span = document.createElement('span')
         span.classList.add('submitted')
-        span.innerHTML=`<input type="text" value="${assesmentArr[i].submitted}" id="submitted${i+1}">`
+        span.innerHTML=`<input type="text" value="${assessment_info[i].submitted}" id="submitted${i+1}">`
         submittedDiv.appendChild(span)
 
         // dynamic addition of submission date div field 
         span = document.createElement('span')
         span.classList.add('submission-date')
-        span.innerHTML=`<input type="date" value="${assesmentArr[i].submissionDate}" name="" id="submissionDate${i+1}">`
+        span.innerHTML=`<input type="date" value="${assessment_info[i].submissionDate}" name="" id="submissionDate${i+1}">`
         submissionDateDiv.appendChild(span)
         
         
@@ -154,7 +159,7 @@ window.onload = function(){
         span = document.createElement('span')
         span.classList.add('grade')
         
-            span.innerHTML=`<input type="text" value="${assesmentArr[i].grade}" name="grade${i+1}" id="grade${i+1}">`
+            span.innerHTML=`<input type="text" value="${assessment_info[i].grade}" name="grade${i+1}" id="grade${i+1}">`
             gradeDiv.appendChild(span)
     }
 
@@ -162,81 +167,99 @@ window.onload = function(){
 }
 
 
-
 function submit(){
+  const dor=document.getElementById('inputDateOfReport')
+  const emailId=document.getElementById('inputEmail')
     id = window.location.href;
     var fullId = id.substring(id.indexOf("=", 52) + 1, id.indexOf("ok", 53));
-    formDataGlobal["id"] = fullId;
-    // formDataGlobal['id']=28
-    formDataGlobal['country']= inputCountry.value
-    formDataGlobal['timeZone']= inputTimezone.value
-    formDataGlobal['hoursPerWeek'] = hoursPerWeekInput.value
-    formDataGlobal['noOfSessionsCompleted']=sessionsCompletedInput.value
-    formDataGlobal['noOfSessionsMissed']=missedSessionsInput.value
-    formDataGlobal['noOfSessionsRescheduled']=sessionsResheduledInput.value
-    formDataGlobal['learningOutcomeValue']=learningOutcomeValue.value
+    // var fullId = 28
 
-    // saving the data of the dynamic attendence field in the formDataGlobal object
-    var attendence =[]
-    for (i=0; i<arr.length; i++){
-        var date = document.getElementById(`date${i+1}`).value
-        var status = document.getElementById(`status${i}`)
-        var topicsCovered=document.getElementById(`topicCovered${i+1}`)
-       
+    for (i=0;i<arr.length;i++){
+      var topicsCovered=document.getElementById(`topicCovered${i+1}`)
+      var topicsCoveredError=document.getElementById(`topicsCoveredError${i+1}`)
+      if (topicsCovered.value.length<35){
+        topics--
+        topicsCoveredError.classList.remove('active')
+      }
+    }
+    if (topics!==0){
+      alert('Topics Covered length should be less then 35 characters')
+    }
+    if (topics==0){
 
-        let year = date.slice(0,4)
-      let month = date.slice(5,7)
-      let dateActual= date.slice(8,9+1)
+      formDataGlobal["lms_id"] = fullId;
+      formDataGlobal['dor']=dor.value;
+      formDataGlobal["email"]=emailId.value;
+      formDataGlobal['country']= inputCountry.value
+      formDataGlobal['time_zone']= inputTimezone.value
+      formDataGlobal['hoursPerWeek'] = hoursPerWeekInput.value
+      formDataGlobal['noOfSessionCompleted']=sessionsCompletedInput.value
+      formDataGlobal['noOfMissedSession']=missedSessionsInput.value
+      formDataGlobal['noOfSessionRescheduled']=sessionsResheduledInput.value
+      formDataGlobal['learningOutcome']=learningOutcomeValue.value
+  
+      // saving the data of the dynamic attendence field in the formDataGlobal object
+      var attendence =[]
+      for (i=0; i<arr.length; i++){
+          var date = document.getElementById(`date${i+1}`).value
+          var status = document.getElementById(`status${i}`)
+          var topicsCovered = document.getElementById(`topicCovered${i+1}`)
+         
+  
+          let year = date.slice(0,4)
+        let month = date.slice(5,7)
+        let dateActual= date.slice(8,9+1)
+        
+         date=`${dateActual}-${month}-${year}`
+  
+          let attendenceObj={
+              attendeceId:i+1,
+              date:date,
+              status:status.value,
+              topicsCovered:topicsCovered.value
+          }
+          attendence.push(attendenceObj)
+      }
+      formDataGlobal['attendence'] = attendence
       
-       date=`${dateActual}-${month}-${year}`
-
-        let attendenceObj={
-            attendeceId:i+1,
-            date:date,
-            status:status.value,
-            topicsCovered:topicsCovered.innerHTML
-        }
-        attendence.push(attendenceObj)
+      assesments=[]
+      for (i=0;i<assessment_info.length; i++){
+          var type = document.getElementById(`type${i+1}`).value
+          var submitted = document.getElementById(`submitted${i+1}`).value
+          var submissionDate=document.getElementById(`submissionDate${i+1}`).value
+          
+              let year = submissionDate.slice(0,4)
+              let month = submissionDate.slice(5,7)
+              let date = submissionDate.slice(8,10)
+              submissionDate=`${date}-${month}-${year}`
+          
+          
+      
+          var grade = document.getElementById(`grade${i+1}`).value
+  
+          var assesment={
+              id:assessment_info[i].id,
+              type:type,
+              completion_status:submitted,
+              completed_on:submissionDate,
+              score:grade
+          }
+  
+          assesments.push(assesment)
+  
+      }
+      formDataGlobal['assessment_info']=assesments
+  
+     console.log(formDataGlobal); 
+  
+     register(formDataGlobal)
+        .then((data) => {
+          console.log("promise completed", data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-    formDataGlobal['attendence'] = attendence
-    
-    assesments=[]
-    for (i=0;i<assesmentArr.length; i++){
-        var type = document.getElementById(`type${i+1}`).value
-        var submitted = document.getElementById(`submitted${i+1}`).value
-        var submissionDate=document.getElementById(`submissionDate${i+1}`).value
-        
-            let year = submissionDate.slice(0,4)
-            let month = submissionDate.slice(5,7)
-            let date = submissionDate.slice(8,10)
-            submissionDate=`${date}-${month}-${year}`
-        
-        
-    
-        var grade = document.getElementById(`grade${i+1}`).value
-
-        var assesment={
-            assesmentId:i+1,
-            type:type,
-            submitted:submitted,
-            submissionDate:submissionDate,
-            grade:grade
-        }
-
-        assesments.push(assesment)
-
-    }
-    formDataGlobal['assesments']=assesments
-
-   console.log(formDataGlobal); 
-
-   register(formDataGlobal)
-      .then((data) => {
-        console.log("promise completed", data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
 }
 
 
