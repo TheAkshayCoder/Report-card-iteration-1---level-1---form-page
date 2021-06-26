@@ -284,7 +284,7 @@ span.heading {
 .heading {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to left, #9e3c7e, #3e1c4f);
+  background-image: linear-gradient(to left, rgb(62,53,147), rgb(182,81,158));
   color: white;
   font-size: 0.79rem;
   font-family: "Montserrat", sans-serif;
@@ -369,7 +369,7 @@ span {
   display: flex;
   align-items: center;
   margin: 0.1rem;
-  background-color: #e9dff3;
+  background: linear-gradient(to right, rgb(240,240,244), rgb(241, 219, 233));
   justify-content: space-between;
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
